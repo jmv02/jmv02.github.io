@@ -1,0 +1,93 @@
+.anuncios {
+    display: grid;
+    color: white;
+    justify-content: center;
+    align-items: start;
+    padding: 100px;
+    background-color: rgb(37, 29, 29);
+    height: 100vh;
+}
+
+
+//Para quitar las flechas de los inputs con numeros en todos los navegadores menos firefox
+input[type=number]::-webkit-inner-spin-button,
+input [type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+
+.form-input {
+    color: white;
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0px 15px 15px rgb(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    border-width: 1px;
+    border-color: white;
+    padding: 10px;
+
+    &:focus {
+        border-color: white;
+        box-shadow: 0px 0px 10px white;
+    }
+
+}
+
+.p-dialog {
+    display: flex !important;
+    background-color: rgb(37, 29, 29) !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    border: 10px !important;
+    border-radius: 40px !important;
+    border-width: 10px !important;
+    border-color: black !important;
+}
+
+.p-button {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    color: black !important;
+    background-color: rgb(245, 229, 229) !important;
+    border-color: black !important;
+    outline: none !important;
+    padding: 10px !important;
+    margin-bottom: 20px !important;
+    border-radius: 40px !important;
+}
+
+.group-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+
+}
+
+.lista {
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.p-data-view {
+    display: flex;
+    width: fit-content !important;
+    height: fit-content !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: rgb(245, 229, 229) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px !important;
+    border-width: 1px !important;
+}

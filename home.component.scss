@@ -1,0 +1,28 @@
+.home{
+    display: flex;
+    justify-content: center; 
+    flex-direction:row;
+    padding: 100px;
+    background-color: rgb(37, 29, 29);
+    height: fit-content;
+}
+
+.login-button {
+    flex-direction: row;
+    color:white;
+    outline:none;
+    background-color:transparent;
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:40px; 
+    border-color:gray
+}
+
+.h1 {
+color:white; 
+}
+
+.botones{
+    padding:10px;
+    
+}

@@ -1,0 +1,29 @@
+<div class="login">
+    <div></div>
+    <div class="img-div">
+        <img class="img" src='/assets/porsche928-login.jpg'>
+    </div>
+
+    <form class="login-form col col-md-12" [formGroup]="loginForm">
+        <h1>Venta Vehiculos Nebrija</h1>
+        <div class="col col-md-12 ">
+            <input class="form-input" type="email" formControlName="email" placeholder="email" />
+        </div>
+        <div class="col col-md-12">
+            <input class="form-input" type="password" formControlName="password" placeholder="password" />
+        </div>
+
+        <div *ngIf="getValidations().email.touched">
+            <span *ngIf="getValidations().email?.value &&  getValidations().email.invalid">Email requerido</span>
+            <span *ngIf="getValidations().email?.value?.match(regexp) &&  getValidations().email.invalid">Email
+                invalido</span>
+        </div>
+
+        <div class="login-button col col-md-12">
+            <button class="login-button" type="submit" (click)="login()">Login</button>
+            <a class="login-button" href="/register">¿No tienes una cuenta?</a>
+        </div>
+    </form>
+
+
+</div>

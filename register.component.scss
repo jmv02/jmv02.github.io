@@ -1,0 +1,38 @@
+.register{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 100px;
+    background-color: rgb(37, 29, 29);
+    height: 100vh;
+}
+
+.register-form{
+    color:white;
+    padding:10px; 
+    font-family:'Roboto';
+}
+
+.form-input {
+    color:white;
+    outline:none;
+    background-color:transparent;
+    box-shadow:0px 15px 15px rgb(0,0,0,0.5);
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:40px; 
+    border-width:1px;
+    border-color:transparent;
+    
+}
+.register-button{
+    display:flex;
+    flex-direction: column;
+    align-items: column;
+    color:white;
+    outline:none;
+    background-color:transparent;
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:40px; 
+}

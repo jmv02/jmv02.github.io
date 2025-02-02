@@ -1,0 +1,21 @@
+<div class="register">
+    <form class="register-form" method="post" [formGroup]="registerForm">
+        <h1>Registra tus datos</h1>
+
+        <div class="col col-md-12">
+            <input class="form-input" type="text" formControlName="username" placeholder="Username">
+        </div>
+        <div class="col col-md-12">
+            <input class="form-input" type="email" formControlName="email" placeholder="Introduce an email" />
+        </div>
+        <div class="col col-md-12">
+            <input class="form-input" type="password" formControlName="password" placeholder="Introduce a password" />
+        </div>
+        <div class="col col-md-12">
+            <input class="form-input" type="password" formControlName="confirmpwd" placeholder="Confirm password">
+        </div>
+        <div>
+            <button class="register-button" type="submit" (click)="register()">Register</button>
+        </div>
+    </form>
+</div>

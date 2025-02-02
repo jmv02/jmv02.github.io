@@ -1,0 +1,46 @@
+<div class="anuncios">
+    <div><h1>{{title}}</h1></div>
+    <div>
+        <p-button *ngIf="!display" (click)="showDialog()" label="Crear anuncio" />
+        <p-dialog  header="Crear anuncio" [modal]="true" [visible]="display" [closable]="false"
+            [style]="{ width: '25rem'}" [draggable]="false">
+            <form class="register-form" method="post" [formGroup]="anunciosForm">
+                <div class="col col-md-12">
+                    <input class="form-input" type="text" formControlName="marca" placeholder="Introduce marca">
+                </div>
+                <div class="col col-md-12">
+                    <input class="form-input" type="text" formControlName="modelo" placeholder="Introduce modelo" />
+                </div>
+                <div class="col col-md-12">
+                    <input class="form-input" type="number" formControlName="price" placeholder="Introduce precio" />
+                </div>
+                <div class="col col-md-12">
+                    <input class="form-input" type="number" formControlName="kilometros"
+                        placeholder="introduce kilometros">
+                </div>
+                <div class="col col-md-12">
+                    <input class="form-input" type="text" formControlName="descripcion"
+                        placeholder="Introduce descripcion">
+                </div>
+            </form>
+            <div class="group-buttons ">
+                <p-button label="Crear" (click)="createAnuncio()" />
+                <p-button label="Cancel"(click)="display = false" />
+            </div>
+        </p-dialog>
+    </div>
+
+    <div>
+        <p-data-view [value]="_anuncios" [lazy]="true" [rows]="3" [paginator]="true" [totalRecords]="5">
+            <ng-template #list let-items>
+                <div *ngFor="let item of items" class="lista">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center flex-1 gap-6">
+                        <h4>Marca: {{item.brand}} Modelo: {{item.model}} Precio:{{item.price}}</h4>
+                        <h4>Kilometros: {{item.kilometros}}</h4>
+                        <h4>Descripcion: {{item.description}}</h4>
+                    </div>
+                </div>
+            </ng-template>
+        </p-data-view>
+    </div>
+</div>
